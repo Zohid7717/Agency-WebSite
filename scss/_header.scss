@@ -1,0 +1,140 @@
+header {}
+
+.header {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 17px;
+    padding-bottom: 19px;
+    align-items: center;
+  }
+
+  &__burger {
+    display: none;
+  }
+
+  &__logo {
+    font-family: 'Banana Brick';
+    color: var(--text-color);
+    font-size: 32px;
+    line-height: 39px;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      color: #54a5d4;
+    }
+
+    &:active {
+      color: #5454D4;
+    }
+  }
+
+  &__navbar {
+    ul {
+      display: flex;
+      column-gap: 16px;
+    }
+
+    a {
+      font-family: 'Proxima Nova Bold';
+      font-size: 20px;
+      line-height: 24px;
+      color: var(--text-color);
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        color: #54a5d4;
+      }
+
+      &:active {
+        color: #5454D4;
+      }
+    }
+  }
+
+  &__right-box {
+    display: flex;
+  }
+
+  &__theme {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    min-width: 93px;
+    height: 42px;
+    border: 1px solid #AAAAAA;
+    padding: 2px;
+    border-radius: 21px;
+    margin-right: 40px;
+  }
+
+  &__theme-box {
+    width: 36px;
+    height: 36px;
+    background-color: #5454D4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 22.5px;
+      min-width: 22.5px;
+      max-height: 22.5px;
+      min-height: 22.5px;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    margin-right: 31px;
+  }
+
+  &__phone {
+    font-size: 20px;
+    color: var(--text-color);
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      color: #54a5d4;
+    }
+
+    &:active {
+      color: #5454D4;
+    }
+  }
+
+  &__email {
+    font-size: 14px;
+    color: var(--text-color);
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      color: #54a5d4;
+    }
+
+    &:active {
+      color: #5454D4;
+    }
+  }
+
+  &__callback {
+    display: flex;
+    width: 168px;
+    background: #5454D4;
+    color: var(--text-color);
+    border-radius: 7px;
+    align-items: center;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    border: 1px solid #5454D4;
+    &:hover{
+      background-color: #ffffff;
+      color: #5454D4;
+    }
+    &:active{
+      background-color: #AAAAAA;
+    }
+  }
+}
