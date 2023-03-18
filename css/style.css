@@ -132,12 +132,27 @@ h1, h2, h3, h4, h5, h6 {
 body {
   font-family: "Banana Brick";
   font-size: 35px;
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
 .u-container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+/*
+!---------------var---------------------!
+*/
+html {
+  --text-color: #000000;
+  --bg-color: #ffffff;
+}
+
+html[data-theme=dark] {
+  --text-color: #ffffff;
+  --bg-color: #1e1e1e;
 }
 
 /*
