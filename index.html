@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -12,46 +12,98 @@
 <body>
   <header>
     <div class="header__container u-container">
-      <div class="header__burger">
-        <span></span>
+      <div class="header__location">
+        <div class="header__burger">
+          <span></span>
+        </div>
+        <a href="index.html" class="header__logo">Logo</a>
+        <nav class="header__navbar">
+          <ul>
+            <li>
+              <a href="#about">Kompaniya haqida</a>
+            </li>
+            <li>
+              <a href="#portfolio">Portfolio</a>
+            </li>
+            <li>
+              <a href="#service">Xizmatlarimiz</a>
+            </li>
+            <li>
+              <a href="#contact">Buyirtma berish</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__right-box">
+          <div class="header__theme">
+            <div class="header__theme-bg-cercle"></div>
+            <div class="header__theme-box-sun">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.75 12H2M12 0.75V2M22 12H23.25M12 22V23.25M4 4L4.875 4.875M20 4L19.125 4.875M19.125 19.125L20 20M4.875 19.125L4 20M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z"
+                  stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="header__theme-box-moon">
+              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 1.74999C12.165 1.74999 12.3287 1.74999 12.4912 1.74999C10.8854 3.24212 9.85321 5.2498 9.57408 7.42402C9.29496 9.59824 9.78655 11.8015 10.9634 13.6509C12.1402 15.5003 13.9279 16.8788 16.0157 17.5468C18.1035 18.2149 20.3594 18.1302 22.3912 17.3075C21.6096 19.1881 20.3322 20.8213 18.6952 22.0328C17.0582 23.2443 15.123 23.9888 13.0961 24.1867C11.0692 24.3847 9.02655 24.0287 7.18608 23.1567C5.34562 22.2848 3.77636 20.9296 2.64571 19.2357C1.51505 17.5419 0.86541 15.5728 0.766078 13.5387C0.666745 11.5046 1.12145 9.48161 2.08169 7.68563C3.04192 5.88965 4.47167 4.38802 6.21843 3.34091C7.96518 2.29379 9.96341 1.74048 12 1.73999V1.74999Z"
+                  stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+          <div class="header__contact">
+            <a href="tel:+998907777777" class="header__phone">+998 90 777-77-77</a>
+            <a href="mail:chotatam@gmail.com" class="header__email">chotatam@gmail.com</a>
+          </div>
+          <a href="#callback" class="header__callback">Qo`ng`iroq buyurtmasi</a>
+        </div>
       </div>
-      <a href="index.html" class="header__logo">Logo</a>
-      <nav class="header__navbar">
-        <ul>
-          <li>
-            <a href="#about">Kompaniya haqida</a>
-          </li>
-          <li>
-            <a href="#portfolio">Portfolio</a>
-          </li>
-          <li>
-            <a href="#service">Xizmatlarimiz</a>
-          </li>
-          <li>
-            <a href="#contact">Buyirtma berish</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="header__right-box">
-        <div class="header__theme">
-          <div class="header__theme-box">
-            <img src="./img/icon/sun.svg" alt="sun">
-          </div>
-          <div class="header__theme-box">
-            <img src="./img/icon/moon.svg" alt="moon">
+      <div class="header__hidden-navbar">
+        <div class="header__hidden-navbar-head">
+          <a href="index.html">Logo</a>
+          <div class="header__burger-exit"></div>
+        </div>
+        <div class="header__hidden-navbar-main">
+          <ul>
+            <li>
+              <a href="#about">Kompaniya haqida</a>
+            </li>
+            <li>
+              <a href="#portfolio">Portfolio</a>
+            </li>
+            <li>
+              <a href="#service">Xizmatlarimiz</a>
+            </li>
+            <li>
+              <a href="#contact">Buyirtma berish</a>
+            </li>
+          </ul>
+          <div class="header__hidden-navbar-phone">
+            <a href="tel:+998999999999">(99) 999 9999</a>
           </div>
         </div>
-        <div class="header__contact">
-          <a href="tel:+998907777777" class="header__phone">+998 90 777-77-77</a>
-          <a href="mail:chotatam@gmail.com" class="header__email">chotatam@gmail.com</a>
-        </div>
-        <a href="#callback" class="header__callback">Qo`ng`iroq buyurtmasi</a>
       </div>
     </div>
   </header>
-
+  <section class="hero">
+    <img src="./img/images/hero-bg1-min.png" class="hero__bg1" alt="">
+    <img src="./img/images/hero-bg2-min.png" class="hero__bg2" alt="">
+    <div class="hero__bg3">
+      <img src="./img/images/hero-bg3-bg-mini.png" class="hero__bg3-bg" alt="">
+      <div class="hero__main u-container">
+        <div class="hero__main-left">
+          <h1>Biz veb-saytlar, ilovalarni ishlab chiqamiz</h1>
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</span>
+          <div class="u-btn">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <main>
     <div class="main__container u-container">
+      
     </div>
   </main>
 

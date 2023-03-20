@@ -1,0 +1,34 @@
+.hero {
+  position: relative;
+  &__bg1 {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+  }
+
+  &__bg2 {
+    position: absolute;
+    top: 66.83px;
+    z-index: 1;
+  }
+
+  &__bg3 {
+    border: 1px solid black;
+    position: relative;
+    display: flex;
+    z-index: 2;
+    width: 100%;
+    background-image: url(../img/images/hero-bg3-min.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding-top: 78px;
+  }
+
+  &__bg3-bg {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+  }
+}

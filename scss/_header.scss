@@ -1,7 +1,17 @@
-header {}
+header {
+  background: rgba(23, 25, 29, 0.1);
+  backdrop-filter: blur(1px);
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+}
 
 .header {
   &__container {
+    position: relative;
+  }
+
+  &__location {
     display: flex;
     justify-content: space-between;
     padding-top: 17px;
@@ -10,7 +20,40 @@ header {}
   }
 
   &__burger {
+    cursor: pointer;
+    width: 24px;
+    height: 19px;
     display: none;
+    align-items: center;
+    position: relative;
+
+    span {
+      display: flex;
+      width: 24px;
+      height: 3px;
+      background-color: var(--text-color);
+      border-radius: 1.5px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 18px;
+      height: 3px;
+      border-radius: 1.5px;
+      background-color: var(--text-color);
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      bottom: 0;
+      right: 0;
+    }
   }
 
   &__logo {
@@ -26,6 +69,37 @@ header {}
 
     &:active {
       color: #5454D4;
+    }
+  }
+
+  &__burger-exit {
+    display: flex;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    width: 23.5px;
+    height: 23.5px;
+    position: relative;
+    transition: 0.3s ease-in-out;
+
+    &::before,
+    &::after {
+      content: '';
+      display: flex;
+      border-radius: 1.5px;
+      width: 29.96px;
+      height: 3px;
+      background-color: #ffffff;
+      position: absolute;
+      top: 10px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(135deg);
     }
   }
 
@@ -60,35 +134,43 @@ header {}
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-    min-width: 93px;
     height: 42px;
     border: 1px solid #AAAAAA;
     padding: 2px;
     border-radius: 21px;
     margin-right: 40px;
+    position: relative;
+    column-gap: 10px;
   }
 
-  &__theme-box {
+  &__theme-bg-cercle {
+    position: absolute;
     width: 36px;
     height: 36px;
+    border-radius: 50%;
     background-color: #5454D4;
+    display: flex;
+    transition: 0.3s ease-in-out;
+    right: 56%;
+  }
+
+  &__theme-box-sun,
+  &__theme-box-moon {
+    position: relative;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    img {
-      max-width: 22.5px;
-      min-width: 22.5px;
-      max-height: 22.5px;
-      min-height: 22.5px;
-    }
   }
 
   &__contact {
     display: flex;
     flex-direction: column;
     margin-right: 31px;
+    row-gap: 3px;
   }
 
   &__phone {
@@ -123,7 +205,7 @@ header {}
     display: flex;
     width: 168px;
     background: #5454D4;
-    color: var(--text-color);
+    color: white;
     border-radius: 7px;
     align-items: center;
     text-align: center;
@@ -131,12 +213,131 @@ header {}
     border: 1px solid #5454D4;
 
     &:hover {
-      background-color: #ffffff;
+      background: transparent;
       color: #5454D4;
     }
 
     &:active {
-      background-color: #AAAAAA;
+      background: #AAAAAA;
     }
+  }
+
+  &__hidden-navbar {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 100vh;
+    position: absolute;
+    top: 0%;
+    left: -100%;
+    transition: 0.3s ease-in-out;
+    background: rgba(17, 19, 23, 0.9);
+    backdrop-filter: blur(2.5px);
+    opacity: 0;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      margin: 40px 0 0 40px;
+      row-gap: 30px;
+    }
+
+    a {
+      font-family: 'Proxima Nova Bold';
+      font-size: 32px;
+      line-height: 39px;
+      color: #FFFFFF;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        color: #54a5d4;
+      }
+
+      &:active {
+        color: #5454D4;
+      }
+    }
+  }
+
+  &__hidden-navbar-head {
+    display: flex;
+    padding: 20px 20px 20px 15px;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      font-family: 'Banana Brick';
+      color: white;
+      font-size: 32px;
+      line-height: 39px;
+      transition: 0.3s ease-in-out;
+    }
+
+  }
+
+  &__hidden-navbar-phone {
+    display: flex;
+    justify-content: center;
+
+
+    a {
+      padding: 22px 44px;
+      font-family: 'Proxima Nova Bold';
+      font-size: 32px;
+      line-height: 39px;
+      color: #FFFFFF;
+      background-color: #5454D4;
+      border-radius: 38px;
+    }
+  }
+
+  &__hidden-navbar-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-bottom: 96px;
+  }
+}
+
+.active-theme {
+  right: 2px;
+}
+
+/*
+!--------------adaptive---------------!
+*/
+
+@media (max-width: 1240px) {
+  .header__burger {
+    display: flex;
+  }
+
+  .header__navbar {
+    display: none;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .header__contact {
+    display: none;
+  }
+
+  .header__callback {
+    display: none;
+  }
+
+  .header__theme {
+    margin: 0;
+  }
+
+  .header__theme-box-sun,
+  .header__theme-box-moon {
+    display: none;
+  }
+
+  .header__theme-bg-cercle {
+    right: 2px;
   }
 }
