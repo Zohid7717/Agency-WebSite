@@ -3,6 +3,8 @@ body {
   font-size: 18px;
   color: var(--text-color);
   background-color: var(--bg-color);
+  position: relative;
+  overflow-x: hidden;
 }
 
 .u-container {
